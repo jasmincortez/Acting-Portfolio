@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Acting Portifolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link
+     rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+   />
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+  </head>
+
+  <body>
+    <main>
+    <!--/NavBar section-->
+    <div class="navbar">
+      <!--/icon section-->
+      <div class="nav-contact-links">
+        <a id="email-link"
+                href="mailto:jasmincortez_@outlook.com"
+                target="_blank"
+                class="contact-link"><i class="fas fa-at contact-icons"></i></a>
+        <a id="profile-link"
+                href="https://www.instagram.com/jasmincortez/"
+                target="_blank"
+                class="contact-link"><i class="fab fa-instagram contact-icons"></i></a>
+        <a id="linkedin-link"
+                href="https://www.youtube.com/channel/UCBBEwlCFKcZOVGu1wujKLsg"
+                target="_blank"
+                class="contact-link"><i class="fab fa-youtube contact-icons"></i></a>
+          <a id="spotify-link"
+                href="https://open.spotify.com/artist/3XA4qu7vSl0S2hWmVYCPec?si=q61XLy9DSQCwAEAAegx1Gw"
+                target="_blank"
+                class="contact-link"><i class="fab fa-spotify contact-icons"></i></a>
+        </div>
+      <section id="nav-contact" class="nav-contact-section">
+        <nav id="navbar" class="nav">
+    <!--Pages section-->
+          <ul class="nav-list">
+            <li><a class="nav-link" href="index.html" rel="internal" style="text-decoration: none;">HOME</a></li> 
+            <li><a class="nav-link" href="bio.html" rel="internal" style="text-decoration: none;">BIO</a></li>
+            <li><a class="nav-link" href="tv&film.html" rel="internal" style="text-decoration: none;">TV & FILM</a></li>
+            <li><a class="nav-link" href="theatre.html" rel="internal" style="text-decoration: none;">THEATRE</a></li>
+            <li><a class="nav-link" href="videos.html" rel="internal" style="text-decoration: none;">VIDEOS</a></li>
+            <li><a class="nav-link" href="contact.html" rel="internal" style="text-decoration: none;">CONTACT</a></li>
+          </ul>
+        </nav>
+      </section>
+  <!--MAKE THE TRANSLATOR-->
+</div>
+
+<!-- Contact Section-->
+<div class="contact-section">
+  <img class="contact-image" src="https://lh3.googleusercontent.com/drive-viewer/AFGJ81pTzb98C3Qaw7mYSALK5yk4nfYAFsb-4C9jX17yB8B0j6AGfu37MEHfowWE1aB9jxlKZxz1HiohvltcfhXGL8XnC7bI6w=s1600" alt="project">
+  <div class="form-header">
+    <h4>Let's get in touch!</h4>
+    <h5>jasmincortez_@outlook.com</h5>
+    <h5>+44 7477965933</h5>
+    <br>
+    <a class ="email-btn" href = "mailto:jasmincortez_@outlook.com">
+      Send Email
+    </a> <br><br>
+    <a class ="ig-btn" href= "#instagram-widget">
+      Connect on Instagram
+    </a>
+  </div>
+</div>
+<!--Instagram-->
+<iframe class="instagram-widget" id="instagram-widget" src='https://widgets.sociablekit.com/instagram-feed/iframe/141195' frameborder='0'></iframe>
+
+</main>
+<!--/Footer section-->
+<footer>
+  <div class="contact-links">
+    <a id="email-link"
+            href="mailto:jasmincortez_@outlook.com"
+            target="_blank"
+            class="contact-link"><i class="fas fa-at contact-icons"></i></a>
+    <a id="profile-link"
+            href="https://www.instagram.com/jasmincortez/"
+            target="_blank"
+            class="contact-link"><i class="fab fa-instagram contact-icons"></i></a>
+    <a id="linkedin-link"
+            href="https://www.youtube.com/channel/UCBBEwlCFKcZOVGu1wujKLsg"
+            target="_blank"
+            class="contact-link"><i class="fab fa-youtube contact-icons"></i></a>
+      <a id="spotify-link"
+            href="https://open.spotify.com/artist/3XA4qu7vSl0S2hWmVYCPec?si=q61XLy9DSQCwAEAAegx1Gw"
+            target="_blank"
+            class="contact-link"><i class="fab fa-spotify contact-icons"></i></a>
+            </div>
+      </footer>
+</body>
+
+<script>
+  const phoneInputField = document.querySelector("#phone");
+  const phoneInput = window.intlTelInput(phoneInputField, {
+    utilsScript:
+      "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+  });
+  const info = document.querySelector(".alert-info");
+
+function process(event) {
+ event.preventDefault();
+
+ const phoneNumber = phoneInput.getNumber();
+
+ info.style.display = "";
+ info.innerHTML = `Phone number in E.164 format: <strong>${phoneNumber}</strong>`;
+}
+</script>
+
+</html>
